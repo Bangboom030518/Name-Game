@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Clifts Name Game - Home</title>
+</head>
+<body onload="work(); user();">
+    <h1 onclick="logout();" id="logout">You are logged in!!!!!!</h1>
+    <div id="picking">
+        <h2>Pick five names of real people or fictional characters.</h2>
+        <div class="form" style="width:100%">
+            <input id="word" type="text" name="word" required>
+            <label for="word" class="label-name">
+                <span class="content-name">Name</span>
+            </label>
+        </div>    
+        <div id="form-break"></div>
+        <button id="add-word" class="submit" style="width:100%">Add Word<img src="create.svg" alt="create"></button>
+        <div id="form-break"></div>
+    </div>
+    <div id="form-break"></div>
+    <button id="clear" class="submit" style="width:50%">Clear<img src="delete.svg" alt="delete"></button>    
+    <div id="form-break"></div>
+    <button id="refresh" onclick="diagnose();" class="submit" style="width:50%">Change word<img src="reload.svg" alt="refresh"></button>    
+    <div id="form-break"></div>
+    <div id="mes-mots" style="width: 50%; height: auto">
+    <h2>Your names:</h2>
+    <p id="allowance">0/5</p>
+    <p id="list-container"></p>
+    </div>
+    <div id="form-break"></div>
+    <div id="current-game">
+        <h2>Current Name</h2>
+        <p onchange="diagnose();" id="current-word"></p>
+    </div>
+    <div id="form-break"></div>
+    <div id="guessing-container">
+    <h2>You are guessing</h2>
+    <div class="form" style="width:100%">
+        <input id="guess" type="text" name="guess" required>
+        <label for="guess" class="label-name">
+            <span class="content-name">Type Your Guess Here</span>
+        </label>
+    </div>
+    <p class="error" id="incorrect"></p>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <!--Firebase services-->
+    <script src="/__/firebase/8.0.2/firebase-auth.js"></script>
+    <script src="/__/firebase/8.0.2/firebase-database.js"></script>
+    <script src="/__/firebase/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyDrmXzRxLSJoYEC52r4RANy9XFcQoPZ7Xg",
+          authDomain: "clifts-name-game.firebaseapp.com",
+          projectId: "clifts-name-game",
+          storageBucket: "clifts-name-game.appspot.com",
+          messagingSenderId: "897046298463",
+          appId: "1:897046298463:web:d48d7ac089e5c3ae8500ea",
+          measurementId: "G-V8MXS4P4NS"
+        };
+        // Initialize Firebase
+        //firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>      
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html
